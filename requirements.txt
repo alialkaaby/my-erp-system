@@ -1,4 +1,7 @@
 streamlit
 pandas
-sqlalchemy
-plotly
+st-gsheets-connection
+fpdf2
+
+
+
