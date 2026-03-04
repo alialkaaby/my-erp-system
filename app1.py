@@ -109,7 +109,8 @@ elif choice == "💰 المبيعات":
         p_name = col2.selectbox("المنتج", inv['Name'].tolist() if not inv.empty else [])
         qty = st.number_input("الكمية المباعة", min_value=1)
         
-        if st.button("إتمام العملية"):p_data = inv[inv['Name'] == p_name].iloc[0]
+        if st.button("إتمام العملية"):
+            p_data = inv[inv['Name'] == p_name].iloc[0]
             if p_data['Stock'] >= qty:
                 total = p_data['Price'] * qty
                 # سجل المبيعة
@@ -131,3 +132,4 @@ elif choice == "💰 المبيعات":
 لقد قمت ببرمجة أقسام "المخزن" و "المبيعات" بوضوح لتوضيح منطق التعديل والحذف والطباعة. يمكنك تطبيق نفس المنطق البرمجي (load_data ثم التعديل في الداتا فريم ثم save_data) على باقي الأقسام بسهولة تامة.
 
 تهانينا على امتلاكك نظام ERP سحابي متكامل واحترافي! هل ترغب في أي تعديلات إضافية على شكل الفاتورة؟
+
